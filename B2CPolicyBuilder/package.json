@@ -1,0 +1,21 @@
+{
+  "name": "b2cpolicybuilder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./index.ts",
+    "publish": "tsc"
+  },
+  "author": "Joonas Westlin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.6.2",
+    "@types/q": "^1.5.4",
+    "ts-node": "^9.0.0",
+    "typescript": "4.0.2"
+  },
+  "dependencies": {
+    "azure-pipelines-task-lib": "^3.0.6-preview.0"
+  }
+}

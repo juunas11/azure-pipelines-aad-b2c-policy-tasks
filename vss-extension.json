@@ -1,0 +1,56 @@
+{
+    "manifestVersion": 1,
+    "id": "joonasw-b2c-build-tasks",
+    "name": "Azure AD B2C custom policy build and publish",
+    "version": "1.1.0",
+    "publisher": "joonasw",
+    "public": true,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Tasks for building and publishing Azure AD B2C custom policies.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags": ["Azure", "Azure Active Directory B2C"],
+    "content": {
+        "details": {
+            "path": "README.md"
+        }
+    },
+    "icons": {
+        "default": "icon.png"
+    },
+    "files": [
+        {
+            "path": "B2CPolicyBuilder"
+        },
+        {
+            "path": "B2CPolicyPublisher"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "joonasw-b2c-policy-build",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "B2CPolicyBuilder"
+            }
+        },
+        {
+            "id": "joonasw-b2c-policy-publish",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "B2CPolicyPublisher"
+            }
+        }
+    ]
+}
