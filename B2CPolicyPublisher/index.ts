@@ -142,7 +142,7 @@ function run() {
       tl.error(`Policy upload failed: ${err?.message}`);
       if (err.isAxiosError) {
         const error = err as AxiosError;
-        tl.error(`API response: ${error?.response?.data}`);
+        tl.error(`API response: ${JSON.stringify(error?.response?.data)}`);
       }
 
       tl.setResult(tl.TaskResult.Failed, "Policy upload failed");

@@ -129,7 +129,7 @@ function run() {
         tl.error(`Policy upload failed: ${err === null || err === void 0 ? void 0 : err.message}`);
         if (err.isAxiosError) {
             const error = err;
-            tl.error(`API response: ${(_a = error === null || error === void 0 ? void 0 : error.response) === null || _a === void 0 ? void 0 : _a.data}`);
+            tl.error(`API response: ${JSON.stringify((_a = error === null || error === void 0 ? void 0 : error.response) === null || _a === void 0 ? void 0 : _a.data)}`);
         }
         tl.setResult(tl.TaskResult.Failed, "Policy upload failed");
     });
