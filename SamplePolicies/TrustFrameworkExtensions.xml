@@ -1,18 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TrustFrameworkPolicy 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-  xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" 
-  PolicySchemaVersion="0.3.0.0" 
-  TenantId="{Settings:Tenant}" 
-  PolicyId="B2C_1A_{Settings:EnvPrefix}BuildTestTrustFrameworkExtensions" 
-  PublicPolicyUri="http://{Settings:Tenant}/B2C_1A_{Settings:EnvPrefix}BuildTestTrustFrameworkExtensions">
-  
+<TrustFrameworkPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" PolicySchemaVersion="0.3.0.0" TenantId="{Settings:Tenant}" PolicyId="B2C_1A_{Settings:EnvPrefix}BuildTestTrustFrameworkExtensions" PublicPolicyUri="http://{Settings:Tenant}/B2C_1A_{Settings:EnvPrefix}BuildTestTrustFrameworkExtensions">
+
   <BasePolicy>
     <TenantId>{Settings:Tenant}</TenantId>
     <PolicyId>B2C_1A_{Settings:EnvPrefix}BuildTestTrustFrameworkBase</PolicyId>
   </BasePolicy>
- <BuildingBlocks>
+  <BuildingBlocks>
 
   </BuildingBlocks>
 
@@ -50,7 +45,7 @@
 
   </ClaimsProviders>
 
-    <!--UserJourneys>
+  <!--UserJourneys>
 	
 	</UserJourneys-->
 

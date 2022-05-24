@@ -44,7 +44,7 @@ function run() {
         .filter((f) => f.endsWith(".xml"))
         .map((fileName) => {
         const ast = xml_reader_1.default.parseSync(fs_1.default.readFileSync(path_1.default.join(inputFolder, fileName), "utf-8"));
-        const xq = xml_query_1.default(ast);
+        const xq = (0, xml_query_1.default)(ast);
         const policyId = xq.find("TrustFrameworkPolicy").attr("PolicyId");
         const parentId = xq.find("BasePolicy").find("PolicyId").text();
         return {
@@ -98,6 +98,9 @@ function run() {
         const authResult = yield app.acquireTokenByClientCredential({
             scopes: ["https://graph.microsoft.com/.default"],
         });
+        if (authResult === null) {
+            throw new Error("Unable to acquire access token for MS Graph API");
+        }
         tl.debug("MS Graph API access token acquired");
         // Send each policy to Graph API
         for (const deploymentSet of policyDeploymentSets) {

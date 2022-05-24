@@ -105,6 +105,10 @@ function run() {
     const authResult = await app.acquireTokenByClientCredential({
       scopes: ["https://graph.microsoft.com/.default"],
     });
+    if (authResult === null) {
+      throw new Error("Unable to acquire access token for MS Graph API");
+    }
+
     tl.debug("MS Graph API access token acquired");
 
     // Send each policy to Graph API
