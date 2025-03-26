@@ -9,8 +9,8 @@
   "author": "Joonas Westlin",
   "version": {
     "Major": 1,
-    "Minor": 0,
-    "Patch": 2
+    "Minor": 1,
+    "Patch": 1
   },
   "instanceNameFormat": "Publish B2C policies",
   "inputs": [
@@ -49,7 +49,16 @@
   ],
   "execution": {
     "Node10": {
-      "target": "index.js"
+      "target": "index.js",
+      "argumentFormat": ""
+    },
+    "Node16": {
+      "target": "index.js",
+      "argumentFormat": ""
+    },
+    "Node20_1": {
+      "target": "index.js",
+      "argumentFormat": ""
     }
   }
 }

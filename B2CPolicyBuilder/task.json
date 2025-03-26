@@ -9,7 +9,7 @@
   "author": "Joonas Westlin",
   "version": {
     "Major": 1,
-    "Minor": 1,
+    "Minor": 2,
     "Patch": 1
   },
   "instanceNameFormat": "Build B2C policies ($(environment))",
@@ -49,7 +49,16 @@
   ],
   "execution": {
     "Node10": {
-      "target": "index.js"
+      "target": "index.js",
+      "argumentFormat": ""
+    },
+    "Node16": {
+      "target": "index.js",
+      "argumentFormat": ""
+    },
+    "Node20_1": {
+      "target": "index.js",
+      "argumentFormat": ""
     }
   }
 }
