@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "joonasw-b2c-build-tasks",
   "name": "Azure AD B2C custom policy build and publish",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "publisher": "joonasw",
   "public": true,
   "targets": [

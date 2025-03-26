@@ -10,7 +10,7 @@
   "version": {
     "Major": 1,
     "Minor": 3,
-    "Patch": 1
+    "Patch": 2
   },
   "instanceNameFormat": "Build B2C policies ($(environment))",
   "inputs": [
@@ -48,8 +48,8 @@
     },
     {
       "name": "appsettingsFile",
-      "type": "filePath",
-      "label": "Appsettings.json file",
+      "type": "string",
+      "label": "Appsettings.json file path",
       "defaultValue": "",
       "required": false,
       "helpMarkDown": "Path to appsettings.json file (default is inputFolder/appsettings.json if not specified)"
