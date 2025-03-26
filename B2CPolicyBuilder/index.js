@@ -13,11 +13,15 @@ function run() {
     const inputFolder = tl.getPathInput("inputFolder", true, true);
     const outputFolder = tl.getPathInput("outputFolder", true, false);
     const additionalArgumentsInput = tl.getDelimitedInput("additionalArguments", /\r?\n/, false);
+    let appsettingsFile = tl.getPathInput("appsettingsFile", false, true);
     if (env === undefined ||
         inputFolder === undefined ||
         outputFolder === undefined) {
         tl.setResult(tl.TaskResult.Failed, "A parameter is missing");
         return;
+    }
+    if (!appsettingsFile) {
+        appsettingsFile = path_1.default.join(inputFolder, "appsettings.json");
     }
     const additionalArguments = additionalArgumentsInput
         .filter((arg) => arg.indexOf("=") >= 0)
@@ -31,9 +35,9 @@ function run() {
     if (!tl.exist(outputFolder)) {
         tl.mkdirP(outputFolder);
     }
-    const settings = JSON.parse(fs_1.default.readFileSync(path_1.default.join(inputFolder, "appsettings.json"), "utf-8"));
+    const settings = JSON.parse(fs_1.default.readFileSync(appsettingsFile, "utf-8"));
     if (!settings) {
-        tl.setResult(tl.TaskResult.Failed, "Unable to read appsettings.json in input folder", true);
+        tl.setResult(tl.TaskResult.Failed, "Unable to read appsettings.json", true);
         return;
     }
     if (!settings.Environments || settings.Environments.length === 0) {

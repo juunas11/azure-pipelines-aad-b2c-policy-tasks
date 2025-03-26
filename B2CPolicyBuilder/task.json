@@ -9,8 +9,8 @@
   "author": "Joonas Westlin",
   "version": {
     "Major": 1,
-    "Minor": 2,
-    "Patch": 1
+    "Minor": 3,
+    "Patch": 0
   },
   "instanceNameFormat": "Build B2C policies ($(environment))",
   "inputs": [
@@ -45,6 +45,14 @@
       "defaultValue": "",
       "required": false,
       "helpMarkDown": "Additional settings as key-value pairs, one per line. E.g. <br><br>ApiUrl=https://test.com<br>ApiKey=$(ApiKey)"
+    },
+    {
+      "name": "appsettingsFile",
+      "type": "filePath",
+      "label": "Appsettings.json file",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Path to appsettings.json file (default is inputFolder/appsettings.json if not specified)"
     }
   ],
   "execution": {
