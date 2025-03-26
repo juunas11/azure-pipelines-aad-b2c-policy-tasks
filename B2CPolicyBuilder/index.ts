@@ -23,7 +23,7 @@ function run() {
     /\r?\n/,
     false
   );
-  let appsettingsFile = tl.getPathInput("appsettingsFile", false, true);
+  let appsettingsFile = tl.getInput("appsettingsFile", false);
   if (
     env === undefined ||
     inputFolder === undefined ||

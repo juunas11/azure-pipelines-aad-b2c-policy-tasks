@@ -13,7 +13,7 @@ function run() {
     const inputFolder = tl.getPathInput("inputFolder", true, true);
     const outputFolder = tl.getPathInput("outputFolder", true, false);
     const additionalArgumentsInput = tl.getDelimitedInput("additionalArguments", /\r?\n/, false);
-    let appsettingsFile = tl.getPathInput("appsettingsFile", false, true);
+    let appsettingsFile = tl.getInput("appsettingsFile", false);
     if (env === undefined ||
         inputFolder === undefined ||
         outputFolder === undefined) {
